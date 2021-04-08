@@ -2,12 +2,14 @@
   margin-bottom: 30px;
 
   form {
+    width: 90vw;
     display: flex;
     align-items: center;
     border-radius: 10px;
     box-shadow: $box-shadow;
 
     input {
+      width: 100%;
       height: $size-1;
       padding: 0 20px;
       font-size: $font-size-2;
@@ -38,7 +40,7 @@
 
 @media only screen and (min-width: 768px) {
   .search-bar {
-    input {
+    form {
       width: 50vw;
       max-width: 500px;
     }
