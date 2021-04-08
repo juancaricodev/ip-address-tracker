@@ -9,7 +9,9 @@ $color-gray: hsl(0, 0%, 59%);
 $color-white: #fff;
 
 // Font Size
-$font-size: 18px;
+$font-size-1: 23px;
+$font-size-2: 18px;
+$font-size-3: 12px;
 
 // Global Styles
 * {
@@ -18,7 +20,6 @@ $font-size: 18px;
 }
 
 body {
-  font-size: $font-size;
   color: $color-gray-dark;
   background: $color-white;
 }
