@@ -1,27 +1,22 @@
-// Font Weight
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-bold: 700;
-
 // Font
-@font-face {
-  font-family: 'Rubik';
-  src: url(../fonts/rubik/Rubik-Regular.ttf);
-  font-weight: $font-weight-regular;
-}
-@font-face {
-  font-family: 'Rubik';
-  src: url(../fonts/rubik/Rubik-Medium.ttf);
-  font-weight: $font-weight-medium;
-}
-@font-face {
-  font-family: 'Rubik';
-  src: url(../fonts/rubik/Rubik-Bold.ttf);
-  font-weight: $font-weight-bold;
-}
+// @font-face {
+//   font-family: 'rubik';
+//   src: url('../fonts/rubik/Rubik-Regular.ttf') format('truetype');
+//   font-weight: 400;
+// }
+// @font-face {
+//   font-family: 'Rubik';
+//   src: url('../fonts/rubik/Rubik-Medium.ttf') format('truetype');
+//   font-weight: 500;
+// }
+// @font-face {
+//   font-family: 'Rubik';
+//   src: url('../fonts/rubik/Rubik-Bold.ttf') format('truetype');
+//   font-weight: 700;
+// }
 
 // Font Family
-$font-family: 'Rubik', sans-serif;
+$font-family: 'rubik', sans-serif;
 
 // Colours
 $color-gray-dark: hsl(0, 0%, 17%);

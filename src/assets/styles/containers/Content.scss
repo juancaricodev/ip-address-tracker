@@ -1,5 +1,14 @@
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background-image: url('../../img/pattern-bg.png');
+
   &__title {
     font-size: $font-size-1;
+    font-weight: 700;
+    color: $color-white;
   }
 }

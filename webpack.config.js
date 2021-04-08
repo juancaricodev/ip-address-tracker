@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -34,28 +35,51 @@ module.exports = {
         ]
       },
       {
+        test: /\.(s*)css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: ''
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              additionalData: '@import "src/assets/styles/global.scss";',
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.(png|gif|jpg|svg)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: 'assets/[name].[ext]',
-              outputPath: ''
+              // outputPath: 'assets/img',
+              publicPath: '/',
+              useRelativePaths: true
             }
           }
         ]
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.(ttf|otf)$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
-          },
-          'css-loader',
-          {
-            loader: 'sass-loader',
+            loader: 'file-loader',
             options: {
-              additionalData: '@import "src/assets/styles/global.scss";'
+              name: 'assets/[name].[ext]',
+              // outputPath: 'assets/fonts',
+              publicPath: '',
+              useRelativePaths: true
             }
           }
         ]
