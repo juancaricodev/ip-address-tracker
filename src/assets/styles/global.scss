@@ -23,10 +23,23 @@ $color-gray-dark: hsl(0, 0%, 17%);
 $color-gray: hsl(0, 0%, 59%);
 $color-white: #fff;
 
-// Font Size
+// Font Sizes
 $font-size-1: 23px;
 $font-size-2: 18px;
 $font-size-3: 12px;
+
+// Element Sizes
+$size-1: 48px;
+
+// Box Shadow
+$box-shadow: 0 1px 2px 0 rgba($color: $color-gray-dark, $alpha: 0.3);
+
+// Center
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // Global Styles
 * {
