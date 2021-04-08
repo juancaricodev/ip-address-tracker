@@ -23,8 +23,8 @@ npm run start
 * SASS (SCSS)
 * LeafletJS
 
-<!-- ## License -->
-
 ## Author
-
 Juan Camilo Rico Orjuela - <juancaricodev@gmail.com>
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/juancaricodev/ip-address-tracker/blob/main/LICENSE)
