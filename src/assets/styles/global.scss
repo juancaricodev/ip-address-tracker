@@ -1,4 +1,24 @@
+// Font
+// TODO: Add font
+
+// Variables
+
+// Colours
+$color-gray-dark: hsl(0, 0%, 17%);
+$color-gray: hsl(0, 0%, 59%);
+$color-white: #fff;
+
+// Font Size
+$font-size: 18px;
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: #323232;
-  color: #f0f0f0;
+  font-size: $font-size;
+  color: $color-gray-dark;
+  background: $color-white;
 }
