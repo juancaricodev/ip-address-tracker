@@ -1,8 +1,10 @@
 import React from 'react'
 
+import '@styles/components/Data.scss'
+
 const Data = () => {
   return (
-    <div>
+    <div className='data'>
       Data
     </div>
   )

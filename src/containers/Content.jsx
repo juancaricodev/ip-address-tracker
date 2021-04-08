@@ -2,6 +2,7 @@ import React from 'react'
 
 import Data from '@components/Data'
 import SearchBar from '@components/SearchBar'
+import '@styles/containers/Content.scss'
 
 const Content = () => {
   return (
