@@ -24,7 +24,7 @@
     button {
       @include center-flex;
       height: $size-1;
-      width: $size-1;
+      width: 60px;
       border: none;
       border-radius: 0 10px 10px 0;
       background-color: $color-gray-dark;
@@ -38,7 +38,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px), screen and (orientation: landscape) {
   .search-bar {
     margin-bottom: 89px;
     form {

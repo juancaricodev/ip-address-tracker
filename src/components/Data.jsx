@@ -16,7 +16,7 @@ const Data = () => {
       <div className='data__item'>
         <h3 className='data__item-title'>LOCATION</h3>
 
-        <p className='data__item-content'>Bogotá, CO</p>
+        <p className='data__item-content'>Bogotá, CO 20001</p>
       </div>
 
       <span />
