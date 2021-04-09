@@ -1,4 +1,54 @@
+// Font
+// @font-face {
+//   font-family: 'rubik';
+//   src: url('../fonts/rubik/Rubik-Regular.ttf') format('truetype');
+//   font-weight: 400;
+// }
+// @font-face {
+//   font-family: 'Rubik';
+//   src: url('../fonts/rubik/Rubik-Medium.ttf') format('truetype');
+//   font-weight: 500;
+// }
+// @font-face {
+//   font-family: 'Rubik';
+//   src: url('../fonts/rubik/Rubik-Bold.ttf') format('truetype');
+//   font-weight: 700;
+// }
+
+// Font Family
+$font-family: 'rubik', sans-serif;
+
+// Colours
+$color-gray-dark: hsl(0, 0%, 17%);
+$color-gray: hsl(0, 0%, 59%);
+$color-white: #fff;
+
+// Font Sizes
+$font-size-1: 23px;
+$font-size-2: 18px;
+$font-size-3: 11px;
+
+// Element Sizes
+$size-1: 48px;
+
+// Box Shadow
+$box-shadow: 0 1px 2px 0 rgba($color: $color-gray-dark, $alpha: 0.3);
+
+// Center
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: #323232;
-  color: #f0f0f0;
+  font-family: $font-family;
+  color: $color-gray-dark;
+  background: $color-white;
 }

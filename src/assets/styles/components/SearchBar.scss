@@ -1,0 +1,49 @@
+.search-bar {
+  margin-bottom: 147px;
+
+  form {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+
+    input {
+      width: 100%;
+      height: $size-1;
+      padding: 0 20px;
+      font-size: $font-size-2;
+      border: none;
+      border-radius: 10px 0 0 10px;
+
+      &::placeholder {
+        color: $color-gray;
+      }
+    }
+
+    button {
+      @include center-flex;
+      height: $size-1;
+      width: 60px;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      background-color: $color-gray-dark;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba($color-gray-dark, 0.9);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px), screen and (orientation: landscape) {
+  .search-bar {
+    margin-bottom: 89px;
+    form {
+      width: 50vw;
+      max-width: 500px;
+    }
+  }
+}
