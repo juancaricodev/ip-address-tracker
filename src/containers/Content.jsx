@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Data from '@components/Data'
 import SearchBar from '@components/SearchBar'
@@ -32,7 +32,18 @@ const initialData = {
 }
 
 const Content = () => {
-  const [data, setData] = useState(initialData)
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    const KEY = process.env.IPIFY_KEY
+    const ip = '8.8.8.8'
+    const URL = `https://geo.ipify.org/api/v1?apiKey=${KEY}&ipAddress=${ip}`
+
+    fetch(URL)
+      .then(res => res.json())
+      // .then(res => console.log(res))
+      .then(res => setData(res))
+  }, [])
 
   return (
     <section className='content'>
@@ -40,14 +51,16 @@ const Content = () => {
 
       <SearchBar />
 
-      <Data
-        ip={data.ip}
-        city={data.location.city}
-        country={data.location.country}
-        postalCode={data.location.postalCode}
-        timezone={data.location.timezone}
-        isp={data.isp}
-      />
+      {data
+        ? <Data
+            ip={data.ip}
+            city={data.location.city}
+            country={data.location.country}
+            postalCode={data.location.postalCode}
+            timezone={data.location.timezone}
+            isp={data.isp}
+          />
+        : '...loading'}
     </section>
   )
 }
