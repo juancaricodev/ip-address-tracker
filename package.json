@@ -40,6 +40,14 @@
   "eslintConfig": {
     "extends": [
       "./node_modules/standard/eslintrc.json"
-    ]
+    ],
+    "globals": {
+      "fetch": false
+    }
+  },
+  "standard": {
+    "globals": {
+      "fetch": false
+    }
   }
 }
