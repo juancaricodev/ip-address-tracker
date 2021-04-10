@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import Data from '@components/Data'
 import SearchBar from '@components/SearchBar'
+import useGeolocation from '@hooks/useGeolocation'
 import '@styles/containers/Content.scss'
 
 // const initialData = {
@@ -32,18 +33,20 @@ import '@styles/containers/Content.scss'
 // }
 
 const Content = () => {
-  const [data, setData] = useState()
+  // const [data, setData] = useState()
 
-  useEffect(() => {
-    const KEY = process.env.IPIFY_KEY
-    const ip = '8.8.8.8'
-    const URL = `https://geo.ipify.org/api/v1?apiKey=${KEY}&ipAddress=${ip}`
+  // useEffect(() => {
+  //   const KEY = process.env.IPIFY_KEY
+  //   const ip = ''
+  //   const URL = `https://geo.ipify.org/api/v1?apiKey=${KEY}&ipAddress=${ip}`
 
-    fetch(URL)
-      .then(res => res.json())
-      // .then(res => console.log(res))
-      .then(res => setData(res))
-  }, [])
+  //   fetch(URL)
+  //     .then(res => res.json())
+  //     // .then(res => console.log(res))
+  //     .then(res => setData(res))
+  // }, [])
+
+  const data = useGeolocation()
 
   return (
     <section className='content'>
