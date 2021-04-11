@@ -1,19 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
+import { useSearch } from '@hooks/useSearch'
 import '@styles/components/SearchBar.scss'
 
 const SearchBar = () => {
   const [search, setSearch] = useState('')
+  const [input, setInput] = useState('')
+
+  // useEffect(() => {
+  // }, [search])
+  useSearch(search)
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    return console.log(search)
+    setSearch(input)
   }
 
   const inputChange = (e) => {
-    setSearch(e.target.value)
+    setInput(e.target.value)
   }
 
   return (
@@ -23,7 +29,7 @@ const SearchBar = () => {
           type='text'
           placeholder='Search for any IP address'
           onChange={inputChange}
-          value={search}
+          value={input}
         />
 
         <button type='submit'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Data from '@components/Data'
 import SearchBar from '@components/SearchBar'
-import useGeolocation from '@hooks/useGeolocation'
+import { useGeolocation } from '@hooks/useGeolocation'
 import '@styles/containers/Content.scss'
 
 const Content = () => {
