@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
 import { useSearch } from '@hooks/useSearch'
@@ -8,8 +8,6 @@ const SearchBar = () => {
   const [search, setSearch] = useState('')
   const [input, setInput] = useState('')
 
-  // useEffect(() => {
-  // }, [search])
   useSearch(search)
 
   const handleSubmit = (e) => {
