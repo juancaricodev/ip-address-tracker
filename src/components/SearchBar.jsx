@@ -12,7 +12,16 @@ const SearchBar = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    handleIp(input)
+    const newInput = input
+    const regex = /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+
+    const validIp = regex.test(newInput)
+
+    validIp
+      ? handleIp(newInput)
+      : window.alert('Invalid IP')
+
+    // setInput('')
   }
 
   const inputChange = (e) => {
