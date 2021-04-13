@@ -34,7 +34,7 @@
       transition: 0.3s;
 
       &:hover {
-        background-color: rgba($color-gray-dark, 0.9);
+        background-color: $color-gray-dark-hover;
       }
     }
   }
