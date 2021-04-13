@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
-import '@styles/components/SearchBar.scss'
 import { Context } from '@context/Context'
+import '@styles/components/SearchBar.scss'
 
 const SearchBar = () => {
   const [input, setInput] = useState('')
