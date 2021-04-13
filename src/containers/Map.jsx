@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
-
+import { Context } from '@context/Context'
 import '@styles/containers/Map.scss'
 import 'leaflet/dist/leaflet.css'
 
 const Map = () => {
-  const position = [4.60971, -74.08175]
+  const { position } = useContext(Context)
   const zoom = 13
 
   return (
