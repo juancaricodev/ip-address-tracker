@@ -102,7 +102,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css'
     }),
-    new Dotenv()
+    new Dotenv({
+      systemvars: true
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
