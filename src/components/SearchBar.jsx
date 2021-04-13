@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
 import { Context } from '@context/Context'
+import { inputValid } from '../utils/inputValid'
 import '@styles/components/SearchBar.scss'
 
 const SearchBar = () => {
@@ -12,13 +13,13 @@ const SearchBar = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const newInput = input
-    const regex = /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+    // const newInput = input
+    // const regex = /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
 
-    const validIp = regex.test(newInput)
+    // const validIp = regex.test(newInput)
 
-    validIp
-      ? handleIp(newInput)
+    inputValid(input)
+      ? handleIp(input)
       : window.alert('Invalid IP')
 
     // setInput('')
