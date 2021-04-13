@@ -1,17 +1,15 @@
 import React, { createContext, useEffect, useState } from 'react'
 
+import { getIp } from '@services/ipify'
+
 export const Context = createContext({})
 
 export const ContextProvider = ({ children }) => {
   const [geolocation, setGeolocation] = useState()
   const [ip, setIp] = useState('')
 
-  const KEY = process.env.IPIFY_KEY
-  const URL = `https://geo.ipify.org/api/v1?apiKey=${KEY}&ipAddress=${ip}`
-
   useEffect(() => {
-    fetch(URL)
-      .then(res => res.json())
+    getIp(ip)
       .then(res => setGeolocation(res))
   }, [ip])
 
