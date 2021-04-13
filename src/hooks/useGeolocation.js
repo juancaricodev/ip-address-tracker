@@ -8,6 +8,7 @@ export const useGeolocation = (ip) => {
   useEffect(() => {
     getIp(ip)
       .then(res => setGeolocation(res))
+      .catch(err => console.error(`Error fetching ip geolocation => ${err}`))
   }, [ip])
 
   return geolocation
