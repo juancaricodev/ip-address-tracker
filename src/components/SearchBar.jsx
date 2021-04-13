@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 
-import Search from '@img/icon-arrow.svg'
+import Icon from '@img/icon-arrow.svg'
+import { Context } from '@context/Context'
+import { inputValid } from '@utils/inputValid'
 import '@styles/components/SearchBar.scss'
 
 const SearchBar = () => {
+  const [input, setInput] = useState('')
+
+  const { handleIp } = useContext(Context)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    inputValid(input)
+      ? handleIp(input)
+      : window.alert('Invalid IP')
+  }
+
+  const inputChange = (e) => {
+    setInput(e.target.value)
+  }
+
   return (
     <div className='search-bar'>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type='text'
           placeholder='Search for any IP address'
+          onChange={inputChange}
+          value={input}
         />
 
         <button type='submit'>
-          <img src={Search} alt='search icon' />
+          <img src={Icon} alt='search icon' />
         </button>
       </form>
     </div>

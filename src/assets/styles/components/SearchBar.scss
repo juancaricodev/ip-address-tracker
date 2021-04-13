@@ -15,6 +15,7 @@
       font-size: $font-size-2;
       border: none;
       border-radius: 10px 0 0 10px;
+      outline: none;
 
       &::placeholder {
         color: $color-gray;
@@ -29,10 +30,11 @@
       border-radius: 0 10px 10px 0;
       background-color: $color-gray-dark;
       cursor: pointer;
+      outline: none;
       transition: 0.3s;
 
       &:hover {
-        background-color: rgba($color-gray-dark, 0.9);
+        background-color: $color-gray-dark-hover;
       }
     }
   }

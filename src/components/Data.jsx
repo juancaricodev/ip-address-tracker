@@ -2,13 +2,17 @@ import React from 'react'
 
 import '@styles/components/Data.scss'
 
-const Data = () => {
+const Data = (props) => {
+  const { ip, city, country, postalCode, timezone, isp } = props
+
   return (
     <div className='data'>
       <div className='data__item'>
         <h3 className='data__item-title'>IP ADDRESS</h3>
 
-        <p className='data__item-content'>192.212.174.101</p>
+        <p className='data__item-content'>
+          {ip}
+        </p>
       </div>
 
       <span />
@@ -16,7 +20,9 @@ const Data = () => {
       <div className='data__item'>
         <h3 className='data__item-title'>LOCATION</h3>
 
-        <p className='data__item-content'>Bogotá, CO 20001</p>
+        <p className='data__item-content'>
+          {`${city}, ${country} ${postalCode}`}
+        </p>
       </div>
 
       <span />
@@ -24,7 +30,9 @@ const Data = () => {
       <div className='data__item'>
         <h3 className='data__item-title'>TIMEZONE</h3>
 
-        <p className='data__item-content'>UTC -05:00</p>
+        <p className='data__item-content'>
+          {`UTC ${timezone}`}
+        </p>
       </div>
 
       <span />
@@ -32,7 +40,9 @@ const Data = () => {
       <div className='data__item'>
         <h3 className='data__item-title'>ISP</h3>
 
-        <p className='data__item-content'>Google</p>
+        <p className='data__item-content'>
+          {isp}
+        </p>
       </div>
     </div>
   )
