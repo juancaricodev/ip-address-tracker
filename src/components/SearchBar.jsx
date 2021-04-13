@@ -1,15 +1,12 @@
 import React, { useContext, useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
-// import { useSearch } from '@hooks/useSearch'
 import '@styles/components/SearchBar.scss'
 import { Context } from '@context/Context'
 
 const SearchBar = () => {
-  // const [search, setSearch] = useState('')
   const [input, setInput] = useState('')
 
-  // useSearch(search)
   const { handleIp } = useContext(Context)
 
   const handleSubmit = (e) => {
