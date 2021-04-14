@@ -6,7 +6,7 @@ const Data = (props) => {
   const { ip, city, country, postalCode, timezone, isp } = props
 
   return (
-    <div className='data'>
+    <section className='data'>
       <div className='data__item'>
         <h3 className='data__item-title'>IP ADDRESS</h3>
 
@@ -44,7 +44,7 @@ const Data = (props) => {
           {isp}
         </p>
       </div>
-    </div>
+    </section>
   )
 }
 
