@@ -1,9 +1,19 @@
 import React, { useContext } from 'react'
 
+import L from 'leaflet'
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 import { Context } from '@context/Context'
+import icon from 'leaflet/dist/images/marker-icon.png'
+import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 import '@styles/containers/Map.scss'
 import 'leaflet/dist/leaflet.css'
+
+const DefaultIcon = L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow
+})
+
+L.Marker.prototype.options.icon = DefaultIcon
 
 const ChangeView = ({ center, zoom }) => {
   const map = useMap()
