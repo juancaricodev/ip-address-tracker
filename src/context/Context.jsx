@@ -17,7 +17,7 @@ export const ContextProvider = ({ children }) => {
   }
 
   return (
-    <Context.Provider value={{ geolocation, handleIp, position }}>
+    <Context.Provider value={{ geolocation, handleIp, position, ip }}>
       {children}
     </Context.Provider>
   )
