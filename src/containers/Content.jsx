@@ -9,8 +9,8 @@ const Content = () => {
   const { geolocation } = useContext(Context)
 
   return (
-    <section className='content'>
-      <div className='content__title'>IP Address Tracker</div>
+    <section className='content' aria-label='content section'>
+      <h1 className='content__title' aria-label='title'>IP Address Tracker</h1>
 
       <SearchBar />
 
