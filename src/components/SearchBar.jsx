@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { memo, useContext, useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
 import { Context } from '@context/Context'
@@ -41,4 +41,4 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+export default memo(SearchBar)
