@@ -9,7 +9,7 @@ export const ContextProvider = ({ children }) => {
   const [ip, setIp] = useState('')
   const [domain, setDomain] = useState('')
 
-  const geolocation = useGeolocation(ip)
+  const geolocation = useGeolocation(ip, domain)
 
   const position = useIpPosition(geolocation)
 
