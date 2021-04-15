@@ -30,7 +30,8 @@ Check the result [here](https://ip-address-tracker-juancaricodev.netlify.app/)!
 ![Desktop Version](./src/assets/img/desktop.png)
 
 ### Mobile Version
-![Mobile Version](./src/assets/img/mobile.png)
+<!-- ![Mobile Version](./src/assets/img/mobile.png =100x20) -->
+<img src="./src/assets/img/mobile.png" width="400" />
 
 ## Features
 
@@ -42,6 +43,7 @@ Check the result [here](https://ip-address-tracker-juancaricodev.netlify.app/)!
 * Webpack
 * SASS (SCSS)
 * LeafletJS
+* ipify
 
 ## Author
 Juan Camilo Rico Orjuela - <juancaricodev@gmail.com>

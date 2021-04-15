@@ -6,7 +6,7 @@ import '@styles/App.scss'
 import Content from '@containers/Content'
 import Map from '@containers/Map'
 import { Context } from '@context/Context'
-import { useTitle } from './hooks/useTitle'
+import { useTitle } from '@hooks/useTitle'
 
 const App = () => {
   const { ip, domain } = useContext(Context)
