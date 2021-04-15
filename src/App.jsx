@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 import { Helmet } from 'react-helmet'
 
@@ -8,13 +8,22 @@ import Map from '@containers/Map'
 import { Context } from '@context/Context'
 
 const App = () => {
-  const { ip } = useContext(Context)
+  const [title, setTitle] = useState('IP Address Tracker')
+  const { ip, domain } = useContext(Context)
+
+  useEffect(() => {
+    if (ip.length > 0) {
+      setTitle(`${ip} | IP Address Tracker`)
+    } else if (domain.length < 0) {
+      setTitle(`${domain} | IP Address Tracker`)
+    }
+  }, [ip, domain])
 
   return (
     <>
       <Helmet>
         <title>
-          {ip.length > 0 ? `${ip} | IP Address Tracker` : 'IP Address Tracker'}
+          {title}
         </title>
 
         <meta name='description' content='Search for the location of any IP among with another key information.' />
