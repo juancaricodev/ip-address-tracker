@@ -15,10 +15,12 @@ export const ContextProvider = ({ children }) => {
 
   const handleIp = (ip) => {
     setIp(ip)
+    setDomain('')
   }
 
   const handleDomain = (domain) => {
     setDomain(domain)
+    setIp('')
   }
 
   return (
