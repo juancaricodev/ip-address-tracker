@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     if (ip.length > 0) {
       setTitle(`${ip} | IP Address Tracker`)
-    } else if (domain.length < 0) {
+    } else if (domain.length > 0) {
       setTitle(`${domain} | IP Address Tracker`)
     }
   }, [ip, domain])
