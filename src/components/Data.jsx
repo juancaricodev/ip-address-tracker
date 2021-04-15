@@ -6,8 +6,8 @@ const Data = (props) => {
   const { ip, city, country, postalCode, timezone, isp } = props
 
   return (
-    <section className='data'>
-      <div className='data__item'>
+    <section className='data' aria-label='ip data section'>
+      <div className='data__item' aria-label='ip address'>
         <h3 className='data__item-title'>IP ADDRESS</h3>
 
         <p className='data__item-content'>
@@ -17,7 +17,7 @@ const Data = (props) => {
 
       <span />
 
-      <div className='data__item'>
+      <div className='data__item' aria-label='location'>
         <h3 className='data__item-title'>LOCATION</h3>
 
         <p className='data__item-content'>
@@ -27,7 +27,7 @@ const Data = (props) => {
 
       <span />
 
-      <div className='data__item'>
+      <div className='data__item' aria-label='timezone'>
         <h3 className='data__item-title'>TIMEZONE</h3>
 
         <p className='data__item-content'>
@@ -37,7 +37,7 @@ const Data = (props) => {
 
       <span />
 
-      <div className='data__item'>
+      <div className='data__item' aria-label='internet service provider'>
         <h3 className='data__item-title'>ISP</h3>
 
         <p className='data__item-content'>
