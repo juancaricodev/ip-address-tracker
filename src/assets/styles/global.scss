@@ -1,22 +1,22 @@
 // Font
-// @font-face {
-//   font-family: 'rubik';
-//   src: url('../fonts/rubik/Rubik-Regular.ttf') format('truetype');
-//   font-weight: 400;
-// }
-// @font-face {
-//   font-family: 'Rubik';
-//   src: url('../fonts/rubik/Rubik-Medium.ttf') format('truetype');
-//   font-weight: 500;
-// }
-// @font-face {
-//   font-family: 'Rubik';
-//   src: url('../fonts/rubik/Rubik-Bold.ttf') format('truetype');
-//   font-weight: 700;
-// }
+@font-face {
+  font-family: 'Rubik';
+  src: url('@fonts/rubik/Rubik-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('@fonts/rubik/Rubik-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('@fonts/rubik/Rubik-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
 
 // Font Family
-$font-family: 'rubik', sans-serif;
+$font-family: 'Rubik';
 
 // Colours
 $color-gray-dark: hsl(0, 0%, 17%);
