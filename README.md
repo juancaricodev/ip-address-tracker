@@ -5,17 +5,37 @@ Project developed from a Frontend Mentor challenge. The main purpose is to make 
 
 ### Install
 ```bash
+yarn
+```
+or
+```bash
 npm install
 ```
 
 ### Start
 ```bash
+yarn start
+```
+or
+```bash
 npm run start
 ```
 
-<!-- ## Demo -->
+## Demo
+Check the result [here](https://ip-address-tracker-juancaricodev.netlify.app/)!
 
-<!-- ## Preview -->
+## Preview
+
+### Desktop Version
+![Desktop Version](./src/assets/img/desktop.png)
+
+### Mobile Version
+![Mobile Version](./src/assets/img/mobile.png)
+
+## Features
+
+* Search by IP
+* Search by Domain
 
 ## Stack
 * React
