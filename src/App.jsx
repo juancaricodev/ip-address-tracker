@@ -6,10 +6,10 @@ import Map from '@containers/Map'
 
 const App = () => {
   return (
-    <>
+    <main>
       <Content />
       <Map />
-    </>
+    </main>
   )
 }
 
