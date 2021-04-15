@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { memo, useContext, useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
 import { Context } from '@context/Context'
@@ -23,16 +23,17 @@ const SearchBar = () => {
   }
 
   return (
-    <div className='search-bar'>
+    <div className='search-bar' aria-label='search bar'>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
           placeholder='Search for any IP address'
           onChange={inputChange}
           value={input}
+          aria-label='ip input'
         />
 
-        <button type='submit'>
+        <button type='submit' aria-label='search'>
           <img src={Icon} alt='search icon' />
         </button>
       </form>
@@ -40,4 +41,4 @@ const SearchBar = () => {
   )
 }
 
-export default SearchBar
+export default memo(SearchBar)

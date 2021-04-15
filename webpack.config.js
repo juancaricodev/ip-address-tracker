@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const Dotenv = require('dotenv-webpack')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -104,6 +105,18 @@ module.exports = {
     }),
     new Dotenv({
       systemvars: true
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          context: path.resolve(__dirname, 'public'),
+          from: 'robots.txt'
+        },
+        {
+          context: path.resolve(__dirname, 'public'),
+          from: 'sitemap.xml'
+        }
+      ]
     })
   ],
   devServer: {
