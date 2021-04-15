@@ -2,20 +2,24 @@ import React, { useContext, useState } from 'react'
 
 import Icon from '@img/icon-arrow.svg'
 import { Context } from '@context/Context'
-import { inputValid } from '@utils/inputValid'
+import { ipValid, domainValid } from '@utils/inputValid'
 import '@styles/components/SearchBar.scss'
 
 const SearchBar = () => {
   const [input, setInput] = useState('')
 
-  const { handleIp } = useContext(Context)
+  const { handleIp, handleDomain } = useContext(Context)
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    inputValid(input)
-      ? handleIp(input)
-      : window.alert('Invalid IP')
+    if (ipValid(input)) {
+      handleIp(input)
+    } else if (domainValid(input)) {
+      handleDomain(input)
+    } else {
+      window.alert('IP or Domain is invalid.')
+    }
   }
 
   const inputChange = (e) => {
@@ -27,7 +31,7 @@ const SearchBar = () => {
       <form onSubmit={handleSubmit}>
         <input
           type='text'
-          placeholder='Search for any IP address'
+          placeholder='Search for any IP address or domain'
           onChange={inputChange}
           value={input}
           aria-label='ip input'
