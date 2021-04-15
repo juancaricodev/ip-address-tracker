@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import '@styles/components/Data.scss'
 
@@ -48,4 +48,4 @@ const Data = (props) => {
   )
 }
 
-export default Data
+export default memo(Data)
