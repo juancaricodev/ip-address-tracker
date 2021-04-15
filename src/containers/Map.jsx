@@ -26,7 +26,7 @@ const Map = () => {
   const zoom = 13
 
   return (
-    <div className='map'>
+    <section className='map' aria-label='map section'>
       {position
         ? (
           <MapContainer
@@ -39,7 +39,7 @@ const Map = () => {
             <Marker position={position} />
           </MapContainer>)
         : '...loading'}
-    </div>
+    </section>
   )
 }
 
